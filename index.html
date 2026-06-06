@@ -47,6 +47,69 @@
       gap: 10px 16px;
     }
 
+    /* Mobile Optimization */
+    @media (max-width: 768px) {
+      body {
+        padding: 16px 12px 24px;
+      }
+
+      .editor {
+        padding: 16px 16px;
+        margin-bottom: 20px;
+      }
+
+      .editor h2 {
+        font-size: 12px;
+        margin-bottom: 12px;
+      }
+
+      .editor-grid {
+        gap: 8px 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 12px 8px 20px;
+      }
+
+      .editor {
+        padding: 12px 12px;
+        margin-bottom: 16px;
+      }
+
+      .editor h2 {
+        font-size: 11px;
+        margin-bottom: 10px;
+      }
+
+      .editor-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+      }
+
+      .editor-field {
+        gap: 2px;
+      }
+
+      .editor-field input,
+      .editor-field textarea {
+        font-size: 14px;
+        padding: 8px 10px;
+      }
+
+      .photo-upload-area {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .photo-preview-small {
+        width: 64px;
+        height: 80px;
+      }
+    }
+
     .editor-field {
       display: flex;
       flex-direction: column;
@@ -174,6 +237,16 @@
 
     .print-btn:hover { opacity: 0.9; transform: translateY(-1px); }
     .print-btn:active { transform: translateY(0); }
+
+    @media (max-width: 480px) {
+      .print-btn {
+        padding: 12px 20px;
+        font-size: 14px;
+        margin-top: 12px;
+        min-height: 44px;
+        touch-action: manipulation;
+      }
+    }
 
     /* ─── PREVIEW LABEL ─── */
     .preview-label {
